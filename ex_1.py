@@ -1,11 +1,13 @@
-#!/usr/bin/env python3
-from librip.gens import field
-
+from librip import gens
 goods = [
-    {'title': 'Ковер', 'price': 2000, 'color': 'green'},
+    {'title': None, 'price': 2000, 'color': 'green'},
     {'title': 'Диван для отдыха', 'price': 5300, 'color': 'black'},
     {'title': 'Стелаж', 'price': 7000, 'color': 'white'},
     {'title': 'Вешалка для одежды', 'price': 800, 'color': 'white'}
 ]
-
-# Реализация задания 1
+for i in gens.field(goods,'title'):
+    print(i, end ='| ')
+print('')
+for i in gens.gen_random(1,4,10):
+    print(i, end ='| ')
+print('')
