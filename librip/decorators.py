@@ -35,3 +35,18 @@
 # test_4
 # 1
 # 2
+def print_result(func_to_dec):
+    def decorated_func(*args):
+        b = func_to_dec.__name__
+        a = func_to_dec(*args)
+        print(b)
+        if (a.__class__ == dict):
+            for i,j in a.items():
+                print(str(i)+" = "+str(j))
+        elif (a.__class__ == list):
+            for i in a:
+                print(i)
+        else:
+            print(a)
+        return a
+    return decorated_func

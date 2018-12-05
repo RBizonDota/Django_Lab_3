@@ -21,8 +21,6 @@ def test_3():
 @print_result
 def test_4():
     return [1, 2]
-
-
 test_1()
 test_2()
 test_3()

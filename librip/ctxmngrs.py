@@ -6,3 +6,10 @@
 #   sleep(5.5)
 #
 # После завершения блока должно вывестись в консоль примерно 5.5
+import time
+class timer():
+    def __enter__(self):
+        self._start = time.time()
+        return self
+    def __exit__(self,type,value,traceback):
+        print(time.time()-self._start)
